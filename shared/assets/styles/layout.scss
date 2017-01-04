@@ -1,0 +1,51 @@
+.site-view {
+  @include flex-container-direction(column);
+  padding-top: 10px;
+}
+
+.site-view > .header, .footer {
+  @include flex-item-dynamic(0, 1);
+}
+
+body {
+  background: transparent url("../../assets/images/city-aerial-view.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+html, body, #app, .site-view {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 14px;
+  margin: 0;
+}
+
+.main {
+  flex: 1 0;
+  position: relative;
+}
+
+.header, .footer {
+  @include background-opacity($color-dark-grey, 0.75);
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.about {
+
+  max-width: 65%;
+  padding: 30px;
+  @include flex-item-dynamic(2, 1, 60%);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

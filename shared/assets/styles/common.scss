@@ -1,0 +1,66 @@
+@mixin flex-item-dynamic($flex-grow, $flex-shrink, $flex-basis: auto) {
+  flex: $flex-grow $flex-shrink $flex-basis;
+}
+
+@mixin flex-container-direction($direction, $wrap: nowrap){
+  flex-flow: $direction #{$wrap};
+  display: flex;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+.flex-row-wrap {
+  flex-flow: row wrap;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.btn-primary {
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: $color-light-grey--lighten-20;
+  background-color: $color-dark-grey--darken-5;
+  border-color: $color-dark-grey--darken-5;
+}
+
+.btn-primary:hover {
+  color: $color-light-grey--lighten-30;
+  background-color: $color-primary-pink;
+  border-color: $color-light-grey--lighten-20;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

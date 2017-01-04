@@ -1,0 +1,61 @@
+.header ul, li, a {
+  color: white;
+  padding: 0;
+}
+
+.header-nav-container {
+  @include flex-container-direction(row, wrap);
+  height: 100%;
+}
+
+.header nav ul:nth-child(1) {
+  @include flex-container-direction(row, wrap);
+  @include flex-item-dynamic(1, 0);
+  justify-content: flex-start;
+}
+
+.header nav ul:nth-child(2) {
+  @include flex-container-direction(row, wrap);
+  justify-content: flex-end;
+}
+
+.header a {
+  padding: 1em;
+}
+
+.header-brand a {
+  @include background-opacity($color-dark-grey--darken-20, 0.45);
+  border-right: solid 1px $color-light-grey;
+  font-size: 2em;
+  padding: .5em 2em;
+}
+
+.header nav > ul {
+  margin: 0;
+}
+
+.header nav > ul li {
+  list-style: none;
+  margin: auto 0;
+}
+
+.header nav > ul li a {
+  text-decoration: none;
+  display: block;
+}
+
+.header a {
+  color: $color-light-grey--lighten-20;
+}
+
+.header a:hover{
+  color: white;
+}
+
+a.header-active-link {
+  color: white;
+}
+
+.profile-identity {
+  color: $color-light-grey--lighten-20;
+}

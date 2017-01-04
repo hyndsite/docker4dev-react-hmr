@@ -1,0 +1,116 @@
+
+.timeline-event-container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+
+.timeline-event-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  height: 100%;
+}
+
+.timeline-event_details {
+  @include flex-item-dynamic(2, 1, 60%);
+  margin-right: 20px;
+}
+
+.associated-events_details {
+  @include flex-item-dynamic(2, 1);
+  padding-bottom: 20px;
+}
+
+.timeline-event_banner {
+  display: flex;
+  flex-flow: row nowrap;
+  @include background-opacity($color-medium-grey, 0.55);
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+
+.timeline-event_details-title {
+  width: 100%;
+}
+
+.timeline-event_details-title h2 {
+  margin: 0;
+  padding: 10px;
+  color: $color-dark-grey--darken-10;
+}
+
+.timeline-event_details-title h2:first-letter {
+  text-transform: uppercase;
+}
+
+.timeline-event_details-title span {
+  color: $color-light-grey--lighten-50;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.timeline-event_vote button {
+  padding: 10px;
+  margin: 0;
+}
+
+.timeline-event_details-text {
+  padding: 15px;
+  @include flex-container-direction(row, wrap);
+}
+
+.timeline-event_details-text section {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.timeline-event_sources ul li{
+  list-style-type: none;
+}
+
+.timeline-event_sources ul {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.timeline-event_sources a {
+  margin-right: 10px;
+  color: $color-light-grey--lighten-50;
+}
+
+.timeline-event_associated-events {
+  @include flex-item-dynamic(1, 1, 35%);
+  @include flex-container-direction(column);
+  @include background-opacity($color-light-grey--lighten-5, 0.65);
+  height: 50%;
+}
+
+.timeline-event_associated-event-details {
+  padding: 20px;
+}
+
+.timeline-event_associated-events a {
+  color: $color-dark-grey--darken-10
+}
+
+.associated-events_details h3 {
+  color: $color-dark-grey--darken-30;
+}
+
+.timeline-event_associated-title {
+  width: 100%;
+  @include background-opacity($color-medium-grey, 0.55);
+  padding: 0 20px;
+}
+
+.timeline-event_associated-title h2 {
+  margin: 0;
+  padding: 10px;
+  color: $color-dark-grey--darken-10;
+}

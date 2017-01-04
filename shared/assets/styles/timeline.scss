@@ -1,0 +1,116 @@
+.vis-timeline {
+  border: none
+}
+
+.vis-foreground .vis-group {
+  border: none;
+}
+
+.vis-time-axis.vis-foreground {
+  background-color: $color-dark-grey
+}
+
+.vis-time-axis .vis-text {
+  color: white;
+}
+
+.vis-label {
+  background-color: $color-medium-grey--darken-10;
+}
+
+.vis-inner {
+  color: $color-light-grey--lighten-20;
+}
+
+.vis-item {
+  border-radius: 4px;
+}
+
+.timeline-event {
+  background-color: $color-light-grey;
+  border: solid 1px $color-dark-grey;
+  font-size: 1.25em;
+}
+
+.timeline-event a {
+  color: $color-light-grey--lighten-20;
+}
+
+.timeline-event a:hover, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.timeline-event_link {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: -5px;
+}
+
+a.timeline-event_link:hover {
+  background-color: $color-primary-pink
+}
+
+.timeline-event_link-heading h5 {
+  font-size: .80em;
+  margin: 0;
+  border-bottom: solid 1px $color-light-grey--lighten-20;
+  padding-bottom: 2px;
+}
+
+.timeline-event_link-heading, .timeline-event_link-info {
+  flex: 1 1 auto;
+  padding: 2px;
+}
+
+.timeline-info-bar {
+  @include background-opacity($color-dark-grey, 0.45);
+  @include flex-container-direction(row, wrap);
+  justify-content: flex-end;
+}
+
+.timeline-info-bar_filter-criteria {
+  padding: 5px;
+  @include flex-container-direction(row, wrap);
+}
+
+.filter-criteria_date input {
+  border: 1px solid #7F7C7D;
+  @include background-opacity($color-light-grey--lighten-50, 0.15);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px $color-dark-grey;
+  text-align: center;
+}
+
+.filter-criteria {
+  margin-right: 30px;
+}
+
+.filter-criteria label {
+  margin-right: 10px;
+  color: $color-light-grey--lighten-20;
+}
+
+.timeline-event_link-info {
+  width: 100%;
+}
+
+.timeline-event_link-info-detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  align-items: center;
+  font-size: .55em;
+  align-self: flex-start;
+}
+
+.active-item {
+  background-color: $color-primary-pink;
+}
+
+.active-item a {
+  color: white
+}

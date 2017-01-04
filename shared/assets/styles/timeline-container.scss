@@ -1,0 +1,14 @@
+.timeline-container {
+    @include flex-container-direction(column);
+    height: 100%;
+}
+
+.timeline-events {
+    flex: 1 auto;
+}
+
+.timeline {
+    @include background-opacity($color-light-grey, 0.85);
+    width: 100%;
+    flex: 0;
+}

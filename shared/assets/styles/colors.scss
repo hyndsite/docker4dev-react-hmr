@@ -1,0 +1,51 @@
+$color-dark-grey: #4C4A4B;
+$color-primary-pink: #CB0C6C;
+$color-medium-grey : #7F7C7D;
+$color-light-grey : #949092;
+$color-white: #FFFFFF;
+
+//because sass doesn't support dynamic variable generation
+$color-dark-grey--lighten-5: lighten($color-dark-grey, 5%);
+$color-dark-grey--lighten-10: lighten($color-dark-grey, 10%);
+$color-dark-grey--lighten-20: lighten($color-dark-grey, 20%);
+$color-dark-grey--lighten-30: lighten($color-dark-grey, 30%);
+
+$color-dark-grey--darken-5: darken($color-dark-grey, 5%);
+$color-dark-grey--darken-10: darken($color-dark-grey, 10%);
+$color-dark-grey--darken-20: darken($color-dark-grey, 20%);
+$color-dark-grey--darken-30: darken($color-dark-grey, 30%);
+$color-dark-grey--darken-40: darken($color-dark-grey, 40%);
+$color-dark-grey--darken-50: darken($color-dark-grey, 50%);
+
+$color-light-grey--lighten-5: lighten($color-light-grey, 5%);
+$color-light-grey--lighten-10: lighten($color-light-grey, 10%);
+$color-light-grey--lighten-20: lighten($color-light-grey, 20%);
+$color-light-grey--lighten-30: lighten($color-light-grey, 30%);
+$color-light-grey--lighten-40: lighten($color-light-grey, 40%);
+$color-light-grey--lighten-50: lighten($color-light-grey, 50%);
+
+$color-light-grey--darken-5: darken($color-light-grey, 5%);
+$color-light-grey--darken-10: darken($color-light-grey, 10%);
+$color-light-grey--darken-20: darken($color-light-grey, 20%);
+$color-light-grey--darken-30: darken($color-light-grey, 30%);
+
+$color-medium-grey--lighten-5: lighten($color-medium-grey, 5%);
+$color-medium-grey--lighten-10: lighten($color-medium-grey, 10%);
+$color-medium-grey--lighten-20: lighten($color-medium-grey, 20%);
+$color-medium-grey--lighten-30: lighten($color-medium-grey, 30%);
+
+$color-medium-grey--darken-5: darken($color-medium-grey, 5%);
+$color-medium-grey--darken-10: darken($color-medium-grey, 10%);
+$color-medium-grey--darken-20: darken($color-medium-grey, 20%);
+$color-medium-grey--darken-30: darken($color-medium-grey, 30%);
+
+$color-primary-pink--lighten-5: lighten($color-primary-pink, 5%);
+$color-primary-pink--lighten-10: lighten($color-primary-pink, 10%);
+$color-primary-pink--lighten-20: lighten($color-primary-pink, 20%);
+$color-primary-pink--lighten-30: lighten($color-primary-pink, 30%);
+
+$color-primary-pink--darken-5: darken($color-primary-pink, 5%);
+$color-primary-pink--darken-10: darken($color-primary-pink, 10%);
+$color-primary-pink--darken-20: darken($color-primary-pink, 20%);
+$color-primary-pink--darken-30: darken($color-primary-pink, 30%);
+
