@@ -4,8 +4,8 @@ MAINTAINER Max McCarty
 
 ENV NODE_ENV=production PORT=7000
 
-COPY . /var/www
-WORKDIR /var/www
+COPY . /var/app
+WORKDIR /var/app
 
 EXPOSE $PORT
 
