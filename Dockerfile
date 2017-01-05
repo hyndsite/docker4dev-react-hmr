@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.9.2
+FROM beevelop/nodejs-python
 
 MAINTAINER Max McCarty
 
@@ -9,7 +9,6 @@ WORKDIR /var/www
 
 EXPOSE $PORT
 
-RUN apk add --no-cache make gcc g++ python
 RUN npm install --production
 RUN npm run build:prod
 
