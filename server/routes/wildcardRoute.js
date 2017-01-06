@@ -18,7 +18,7 @@ import chalk                                from "chalk";
 
 const wildcardRouter = Router();
 
-wildcardRouter.route("/")
+wildcardRouter.route("*")
     .get(function (req, res) {
         const store = createStore(reducers, {}, applyMiddleware(thunk));
         const location = createLocation(req.url);

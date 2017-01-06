@@ -9,7 +9,6 @@ export default class About extends React.Component {
         return (
             <div className="container">
                 <div className="about primary-bkgd">
-                    <h1>Hello</h1>
                     <p>{info.AboutText}</p>
                 </div>
             </div>
