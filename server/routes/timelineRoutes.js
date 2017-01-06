@@ -6,25 +6,34 @@
 
 /* eslint-disable no-console */
 
-import {Router}                     from "express";
-import timelineSeedItems                from "../data/timelineItems-seed.js";
-import chalk                        from "chalk";
+import React                         from "react";
+import {Router}                      from "express";
+import {getTimelineItemModel}        from "../data_access/modelFactory";
+import chalk                         from "chalk";
 
 const timelineRouter = Router();
-const items = timelineSeedItems.map(function (item) {
-    item.details = item.details.split("\n\n");
-    return item;
-});
 
 timelineRouter.route("/api/timeline(/:id/)?")
-    .get(function (req, res) {
+    .get(async function (req, res) {
+
         try {
-            res.json({timelineItems: items});
+            const {startDate, endDate} = req.query;
+            const query = {};
+            if (startDate && endDate) {
+                query["start"] = {$gte: startDate};
+                query["end"] = {$lte: endDate};
+            }
+
+            const TimelineItem = await getTimelineItemModel();
+            const timelineItems = await TimelineItem.find(query).exec();
+
+            res.json({timelineItems: timelineItems});
         } catch (error) {
-            console.log(chalk.red(error));
+            console.log(chalk.red("There was an error retrieving timeline items: " + error));
             res.status(500).send("There was an error retrieving timeline items.  Please try again later");
         }
     });
+
 
 export default timelineRouter;
 

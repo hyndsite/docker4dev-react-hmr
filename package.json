@@ -45,6 +45,8 @@
     "font-awesome": "4.6.3",
     "history": "2.0.1",
     "jquery": "2.2.3",
+    "mongodb": "2.2.19",
+    "mongoose": "4.6.3",
     "node-sass": "3.7.0",
     "npm-run-all": "1.8.0",
     "open": "0.0.5",

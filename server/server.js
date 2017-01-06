@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable no-console */
 
-import express, {Router}      from "express";
+import express, {Router}        from "express";
 import bodyParser               from "body-parser";
 import webpack                  from "webpack";
 import apiRouteConfig           from "./configurations/apiRoutesConfig";
@@ -11,6 +11,7 @@ import open                     from "open";
 import React                    from "react";
 import chalk                    from "chalk";
 import path                     from "path";
+import {initialize}             from "./initializationTasks";
 
 const host = "localhost";
 const port = 7000;
@@ -34,11 +35,17 @@ if (process.env.NODE_ENV !== "production") {
 
 apiRouteConfig(app);
 
-app.listen(port, function (err) {
-    if (err) {
-        console.log(chalk.red(err));
-    } else {
-        console.log(chalk.blue(`Express server listening at http://${host}:${port}`));
-        open(`http://${host}:${port}`);
-    }
-});
+initialize()
+    .then(function () {
+        app.listen(port, function (err) {
+            if (err) {
+                console.log(chalk.red(err));
+            } else {
+                console.log(chalk.blue(`Express server listening at http://${host}:${port}`));
+                open(`http://${host}:${port}`);
+            }
+        });
+    })
+    .catch(function (err) {
+        console.log(err);
+    });
