@@ -1,6 +1,6 @@
 "use strict";
 import {getTimelineItemModel}  from "./data_access/modelFactory";
-import timelineItems           from "../data/timelineItems-seed";
+import timelineItems           from "./data/timelineItems-seed";
 
 export const initialize = async() => {
     try {
